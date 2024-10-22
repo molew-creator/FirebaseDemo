@@ -80,6 +80,7 @@ public class PrimaryController {
     private void switchToSecondary() throws IOException {
         DemoApp.setRoot("secondary");
     }
+
     public boolean readFirebase()
     {
         key = false;
@@ -101,7 +102,7 @@ public class PrimaryController {
                             document.getData().get("Age")+ " \n ");
                     System.out.println(document.getId() + " => " + document.getData().get("Name"));
                     person  = new Person(String.valueOf(document.getData().get("Name")),
-                            Integer.parseInt(document.getData().get("Age").toString()));
+                            Integer.parseInt(document.getData().get("Age").toString()), String.valueOf(document.getData().get("Phone Number").toString()));
                     listOfUsers.add(person);
                 }
             }
@@ -119,6 +120,7 @@ public class PrimaryController {
         return key;
     }
 
+
     public boolean registerUser() {
         UserRecord.CreateRequest request = new UserRecord.CreateRequest()
                 .setEmail("user222@example.com")
@@ -128,8 +130,10 @@ public class PrimaryController {
                 .setDisplayName("John Doe")
                 .setDisabled(false);
 
+        //contains everything about the user record that is stored in the Authentication tab of firebase
         UserRecord userRecord;
         try {
+            //ask firebase to create a user in the database
             userRecord = DemoApp.fauth.createUser(request);
             System.out.println("Successfully created new user with Firebase Uid: " + userRecord.getUid()
             + " check Firebase > Authentication > Users tab");
@@ -145,8 +149,11 @@ public class PrimaryController {
 
     public void addData() {
 
+        //creating a collection called "Persons".
+        //UUID randomization
         DocumentReference docRef = DemoApp.fstore.collection("Persons").document(UUID.randomUUID().toString());
 
+        //create a collection to store user data
         Map<String, Object> data = new HashMap<>();
         data.put("Name", nameTextField.getText());
         data.put("Age", Integer.parseInt(ageTextField.getText()));
