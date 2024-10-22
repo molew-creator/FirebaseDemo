@@ -47,6 +47,8 @@ public class PrimaryController {
     private boolean key;
     private ObservableList<Person> listOfUsers = FXCollections.observableArrayList();
     private Person person;
+    @FXML
+    private TextField phoneTF;
 
     public ObservableList<Person> getListOfUsers() {
         return listOfUsers;
@@ -99,10 +101,10 @@ public class PrimaryController {
                 for (QueryDocumentSnapshot document : documents)
                 {
                     outputTextArea.setText(outputTextArea.getText()+ document.getData().get("Name")+ " , Age: "+
-                            document.getData().get("Age")+ " \n ");
+                            document.getData().get("Age")+ " , Phone Number: "+ document.getData().get("PhoneNumber")+ " \n ");
                     System.out.println(document.getId() + " => " + document.getData().get("Name"));
                     person  = new Person(String.valueOf(document.getData().get("Name")),
-                            Integer.parseInt(document.getData().get("Age").toString()), String.valueOf(document.getData().get("Phone Number").toString()));
+                            Integer.parseInt(document.getData().get("Age").toString()), String.valueOf(document.getData().get("Phone Number")));
                     listOfUsers.add(person);
                 }
             }
@@ -157,6 +159,7 @@ public class PrimaryController {
         Map<String, Object> data = new HashMap<>();
         data.put("Name", nameTextField.getText());
         data.put("Age", Integer.parseInt(ageTextField.getText()));
+        data.put("PhoneNumber", phoneTF.getText());
 
         //asynchronously write data
         ApiFuture<WriteResult> result = docRef.set(data);

@@ -22,7 +22,7 @@ public class SecondaryController {
         String email = emailTF.getText();
 
         //complete dis :3
-        UserRecord userRecord = DemoApp.fauth.
+        //UserRecord userRecord = DemoApp.fauth.
 
         if (email.equals("")) {
             DemoApp.setRoot("primary");
