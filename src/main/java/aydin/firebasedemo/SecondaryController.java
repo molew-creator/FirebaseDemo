@@ -24,14 +24,14 @@ public class SecondaryController {
         //complete dis :3
         //UserRecord userRecord = DemoApp.fauth.
 
-        if (email.equals("")) {
+        if (email.equals("user222@example.com")) {
             DemoApp.setRoot("primary");
         }
         else{
             Alert newAlert = new Alert(Alert.AlertType.ERROR);
             newAlert.setTitle("Error");
-            newAlert.setHeaderText("CRUD!");
-            newAlert.setContentText("You have to enter a invalid email address.");
+            newAlert.setHeaderText("Invalid credentials!");
+            newAlert.setContentText("You have to enter a valid email address.");
             newAlert.showAndWait();
         }
 

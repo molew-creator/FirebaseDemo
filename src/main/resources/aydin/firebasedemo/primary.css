@@ -1,0 +1,52 @@
+.label
+{
+
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #FFFFFF;
+    -fx-background-color: linear-gradient(#FF3366, #BA265D);
+
+
+}
+
+.text-field
+{
+    -fx-text-fill: #000000;
+    -fx-border-color: #FFFFFF;
+    -fx-background-color: linear-gradient(#FF3366, #BA265D);
+}
+
+.button
+{
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #FFFFFF;
+    -fx-background-color: linear-gradient(#FF3366, #BA265D);
+}
+
+.text-area
+{
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #FFFFFF;
+    -fx-background-color: linear-gradient(#FF3366, #BA265D);
+}
+
+/*.root*/
+/*{*/
+/*    -fx-text-fill: #00ff00;*/
+/*    -fx-border-color: #00FF00;*/
+/*    -fx-background-color: #111111;*/
+/*}*/
+
+#anchor
+{
+    -fx-background-color: linear-gradient(#FF3366, #BA265D);
+}
+
+#vbox
+{
+    -fx-background-color: linear-gradient(#FF3366, #BA265D);
+}
+
+/*#hbox*/
+/*{*/
+/*    -fx-background-color: linear-gradient(#FF3366, #BA265D);*/
+/*}*/

@@ -1,0 +1,42 @@
+.label
+{
+
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    /*-fx-background-color: linear-gradient(#FF3366, #BA265D);*/
+
+
+}
+
+.text-field
+{
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #FFFFFF;
+    -fx-background-color: linear-gradient(#FF3366, #BA265D);
+}
+
+.button
+{
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #FFFFFF;
+    -fx-background-color: linear-gradient(#FF3366, #BA265D);
+}
+
+.text-area
+{
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #FFFFFF;
+    -fx-background-color: linear-gradient(#FF3366, #BA265D);
+}
+
+
+
+#anchor
+{
+    -fx-background-color: linear-gradient(#FF3366, #BA265D);
+}
+
+#vbox
+{
+    -fx-background-color: linear-gradient(#FF3366, #BA265D);
+}

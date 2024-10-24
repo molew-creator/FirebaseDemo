@@ -8,22 +8,21 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aydin.firebasedemo.SecondaryController">
    <children>
-      <VBox alignment="CENTER" prefHeight="373.0" prefWidth="530.0" spacing="20.0">
+      <VBox fx:id="anchor" alignment="CENTER" prefHeight="373.0" prefWidth="530.0" spacing="20.0" stylesheets="@secondary.css">
           <children>
               <Label text="Welcome!">
                <font>
                   <Font size="23.0" />
                </font>
             </Label>
-            <Label text="Please Enter Email Adress">
+            <Label text="Please Enter Email Address">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="emailTF" prefHeight="6.0" prefWidth="149.0" promptText="Email" />
+            <TextField fx:id="emailTF" prefHeight="6.0" prefWidth="149.0" promptText="email" />
               <Button fx:id="secondaryButton" onAction="#switchToPrimary" prefHeight="30.0" prefWidth="120.0" text="Sign in">
                <font>
                   <Font size="14.0" />
